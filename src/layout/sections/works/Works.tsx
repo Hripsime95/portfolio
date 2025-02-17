@@ -2,32 +2,28 @@
 import { styled } from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { Menu } from "../../../components/menu/Menu";
 import { Work } from "../../../components/work/Work";
-import timer from "../../../assets/img/calPhoto.webp";
-import socNet from "../../../assets/img/socNetPohoto.webp";
+import project1 from "../../../assets/img/project1.png";
+import project2 from "../../../assets/img/project2.png";
+import project3 from "../../../assets/img/project3.png";
+import project4 from "../../../assets/img/project4.png";
 import { Container } from "../../../components/Container";
-
-
-const items = ["All", "Landing Page", "React", "SPA"];
 
 export const Works = () => {
     return (
         <StyledWorks>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
-                <Menu MenuItems={items}></Menu>
-
-                <FlexWrapper justify="space-around">
-                    <Work src={socNet} title="social network" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."></Work>
-                    <Work src={timer} title="timer" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."></Work>
-                </FlexWrapper>
+                    <FlexWrapper justify="space-around" wrap="wrap" gap="40px">
+                        <Work src={project1} title="project 1" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."></Work>
+                        <Work src={project2} title="project 2" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."></Work>
+                        <Work src={project3} title="project 3" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."></Work>
+                        <Work src={project4} title="project 4" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."></Work>
+                    </FlexWrapper>
             </Container>
         </StyledWorks>
     )
 }
 
 const StyledWorks = styled.section`
-    min-height: 100vh;
-    background-color: aquamarine;
 `

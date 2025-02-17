@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import { Icon } from "../../components/icon/Icon";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Container } from "../../components/Container";
+import { Theme } from "../../styles/Theme";
 
 export const Footer = () => {
     return (
@@ -40,7 +41,7 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.footer`
-    background-color: #f8b687;
+    background-color: ${Theme.colors.primaryBg};
     min-height: 20vh;
 `
 

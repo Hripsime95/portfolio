@@ -5,7 +5,6 @@ import { Icon } from "../icon/Icon";
 type SkillPropsType = {
     iconId: string
     title: string
-    description: string
 }
 
 export const Skill = (props: SkillPropsType) => {
@@ -13,7 +12,6 @@ export const Skill = (props: SkillPropsType) => {
         <StyledSkill>
             <Icon iconId={props.iconId}/>
             <SkillTitle>{props.title}</SkillTitle>
-            <SkillText>{props.description}</SkillText>
         </StyledSkill>
     )
 }
@@ -24,8 +22,24 @@ const StyledSkill = styled.div`
 `
 
 const SkillTitle = styled.h3`
+    font-size: 30px;
+    font-weight: 600;
+
+    position: relative;
     
-`
-const SkillText = styled.p`
-    
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 5px;
+        background: linear-gradient(to left , #13ADC7, #6978D1, #945DD6);
+        border-radius: 10px;
+
+        position: absolute;
+        top: 20px;
+        left: -50px;
+        right: -50px;
+
+        z-index: 1;
+        
+    }
 `

@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        line-height: 1.2;
     }
 
     a {
@@ -32,6 +33,10 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
     }
 
+    section{
+        padding: 100px 0;
+    }
+
     section:nth-of-type(odd){
         background-color: ${Theme.colors.primaryBg};
     }
@@ -40,5 +45,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${Theme.colors.secondaryBg};
     }
 
-
+    .App{
+        overflow-x: hidden;
+    }
 `
