@@ -1,71 +1,41 @@
 import React from "react";
-import { styled } from "styled-components";
 import { Icon } from "../../components/icon/Icon";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Container } from "../../components/Container";
-import { Theme } from "../../styles/Theme";
+import { S } from "./FooterStyles";
 
 export const Footer: React.FC = () => {
     return (
-        <StyledFooter>
+        <S.Footer>
             <Container>
                 <FlexWrapper direction="column" align="center">
-                    <Name>My social links</Name>
-                    <SocialList>
-                        <SocialItem>
-                            <SocialIconLink href="https://www.instagram.com/hip_madoyan/" target="_blank">
+                    <S.Name>My social links</S.Name>
+                    <S.SocialList>
+                        <S.SocialItem>
+                            <S.SocialIconLink href="https://www.instagram.com/hip_madoyan/" target="_blank">
                                 <Icon iconId={"instagram"}/>
-                            </SocialIconLink>
-                        </SocialItem>
-                        <SocialItem>
-                            <SocialIconLink href="https://t.me/hripsime_madoyan" target="_blank">
+                            </S.SocialIconLink>
+                        </S.SocialItem>
+                        <S.SocialItem>
+                            <S.SocialIconLink href="https://t.me/hripsime_madoyan" target="_blank">
                                 <Icon iconId={"telegram"}/>
-                            </SocialIconLink>
-                        </SocialItem>
-                        <SocialItem>
-                            <SocialIconLink href="" target="_blank">
+                            </S.SocialIconLink>
+                        </S.SocialItem>
+                        <S.SocialItem>
+                            <S.SocialIconLink href="" target="_blank">
                                 <Icon iconId={"github"}/>
-                            </SocialIconLink>
-                        </SocialItem>
-                        <SocialItem>
-                            <SocialIconLink href="https:/google.com" target="_blank">
+                            </S.SocialIconLink>
+                        </S.SocialItem>
+                        <S.SocialItem>
+                            <S.SocialIconLink href="https:/google.com" target="_blank">
                                 <Icon iconId={"linkedin"}/>
-                            </SocialIconLink>
-                        </SocialItem>
-                    </SocialList>
-                    <Copyright>@2025 Ripsime Madoyan</Copyright>
+                            </S.SocialIconLink>
+                        </S.SocialItem>
+                    </S.SocialList>
+                    <S.Copyright>@2025 Ripsime Madoyan</S.Copyright>
 
                 </FlexWrapper>
             </Container>            
-        </StyledFooter>
+        </S.Footer>
     )
 }
-
-const StyledFooter = styled.footer`
-    background-color: ${Theme.colors.primaryBg};
-    min-height: 20vh;
-`
-
-const Name = styled.span`
-    font-size: 12px;
-    margin: 10px 0;
-    color: ${Theme.colors.accent}
-`
-const SocialList = styled.ul`
-    display: flex;
-    gap: 5px;
-`
-
-const SocialItem = styled.li`
-    
-`
-
-const SocialIconLink = styled.a`
-    /* cursor: pointer; */
-`
-
-const Copyright = styled.div`
-    font-size: 10px;
-    margin: 10px 0;
-    color: ${Theme.colors.accent}
-`
