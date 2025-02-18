@@ -13,6 +13,7 @@ const Header = styled.header`
 `
 
 const MenuItem = styled.a`
+    display: inline-block;
     &::first-letter {
         text-transform: uppercase; 
     }
