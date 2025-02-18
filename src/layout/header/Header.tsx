@@ -1,45 +1,36 @@
-// import React from "react";
-import styled from "styled-components";
-import { Logo } from "../../components/logo/logo";
+import React from "react";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { Theme } from "../../styles/Theme";
-import { DesktopMenu } from "../../components/menu/DesktopMenu";
-import { MobileMenu } from "../../components/menu/MobileMenu";
+import { DesktopMenu } from "./desktopMenu/DesktopMenu";
+import { MobileMenu } from "./mobileMenu/MobileMenu";
 import { Icon } from "../../components/icon/Icon";
+import { S } from "./menuStyles";
 
-const items = ["Home", "Skills", "Works", "Contact"];
+const items = ["home", "skills", "works", "contact"];
 
 export const Header = () => {
+
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 768;
+
+    React.useEffect(() => {
+        window.addEventListener("resize", () => setWidth(window.innerWidth));
+    })
+
     return (
         <div>
-            <StyledDesktopHeader>
+            <S.Header>
                 <Container>
                     <FlexWrapper justify="space-between">
                         <Icon iconId={'code'}/>
-                        <DesktopMenu MenuItems={items}/>
-                    </FlexWrapper>
-                    
-                </Container>
-            </StyledDesktopHeader>
-            <MobileMenu MenuItems={items}/>
-        </div>
-        
 
+                        {width < breakpoint ? <MobileMenu MenuItems={items}/> 
+                                            : <DesktopMenu MenuItems={items}/>}
+
+                    </FlexWrapper>
+                </Container>
+            </S.Header>
+        </div>
     );
 }
 
-const StyledDesktopHeader = styled.header`
-    background-color: ${Theme.colors.primaryBg}, 0.7;
-    backdrop-filter: blur(10px);
-    padding: 20px 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-
-    z-index: 5;
-
-    @media ${Theme.media.tablet}{
-        display: none;
-    }
-`

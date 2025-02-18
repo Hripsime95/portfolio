@@ -1,44 +1,30 @@
-import { useState } from "react";
 import { css, styled } from "styled-components";
 import { Theme } from "../../styles/Theme";
 
-export const MobileMenu = (props: {MenuItems: string[]}) => {
+const Header = styled.header`
+    background-color: ${Theme.colors.primaryBg}, 0.7;
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
 
-    const [menuIsOpen, setMenuIsOpen] = useState(false);
-
-    const toggleBurgerMenu = () => {setMenuIsOpen(!menuIsOpen)};
-
-    return (
-        <StyledMobileMenu>
-            <StyledMenuButton isOpen={menuIsOpen} onClick={toggleBurgerMenu}>
-                <span></span>
-            </StyledMenuButton>
-            <StyledMenuPopup isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
-                <ul>
-                    {props.MenuItems.map((item, index) => {
-                        return <li key={index}>
-                                <a href="">{item}</a>
-                            </li>
-                    })}
-                </ul>
-            </StyledMenuPopup>
-        </StyledMobileMenu>
-    );
-}
-
-const StyledMobileMenu = styled.nav`
-    display: none;
-
-    @media ${Theme.media.tablet} {
-        display: block;
-    }
+    z-index: 5;
 `
 
-const StyledMenuButton = styled.button<{isOpen: boolean}>`
+const MenuItem = styled.a`
+    &::first-letter {
+        text-transform: uppercase; 
+    }
+`
+//Mobile
+const MobileMenu = styled.nav`
+`
+const MenuButton = styled.button<{isOpen: boolean}>`
     position: fixed;
     width: 200px;
     height: 200px;
-    top: -30px;
+    top: -55px;
     right: -100px;
     z-index: 999999999;
 
@@ -86,9 +72,9 @@ const StyledMenuButton = styled.button<{isOpen: boolean}>`
         
     } 
 `
-
-const StyledMenuPopup = styled.div<{isOpen: boolean}>`
+const MenuPopup = styled.div<{isOpen: boolean}>`
     position:fixed;
+    min-height: 100vh;
     top: 0;
     right: 0;
     left: 0;
@@ -116,3 +102,32 @@ const StyledMenuPopup = styled.div<{isOpen: boolean}>`
         }
     }
 `
+
+//Desktop
+const DesktopMenu = styled.nav`
+    ul {
+        display: flex;
+        gap: 70px;
+
+        li {
+            border-bottom: 1px solid transparent;
+
+            &:hover{
+                border-bottom: 1px solid ${Theme.colors.accent};
+            }
+        }
+
+        li > a {
+            color: ${Theme.colors.accent}
+        }
+    }
+`
+
+export const S = {
+    Header,
+    MenuItem,
+    MobileMenu,
+    MenuButton,
+    MenuPopup,
+    DesktopMenu,
+}

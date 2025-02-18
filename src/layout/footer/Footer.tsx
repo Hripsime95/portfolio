@@ -1,11 +1,11 @@
-// import React from "react";
+import React from "react";
 import { styled } from "styled-components";
 import { Icon } from "../../components/icon/Icon";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Container } from "../../components/Container";
 import { Theme } from "../../styles/Theme";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
         <StyledFooter>
             <Container>
@@ -13,12 +13,12 @@ export const Footer = () => {
                     <Name>My social links</Name>
                     <SocialList>
                         <SocialItem>
-                            <SocialIconLink href="" target="_blank">
+                            <SocialIconLink href="https://www.instagram.com/hip_madoyan/" target="_blank">
                                 <Icon iconId={"instagram"}/>
                             </SocialIconLink>
                         </SocialItem>
                         <SocialItem>
-                            <SocialIconLink href="" target="_blank">
+                            <SocialIconLink href="https://t.me/hripsime_madoyan" target="_blank">
                                 <Icon iconId={"telegram"}/>
                             </SocialIconLink>
                         </SocialItem>
@@ -28,7 +28,7 @@ export const Footer = () => {
                             </SocialIconLink>
                         </SocialItem>
                         <SocialItem>
-                            <SocialIconLink href="" target="_blank">
+                            <SocialIconLink href="https:/google.com" target="_blank">
                                 <Icon iconId={"linkedin"}/>
                             </SocialIconLink>
                         </SocialItem>

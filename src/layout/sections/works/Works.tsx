@@ -1,5 +1,4 @@
-// import React from "react";
-import { styled } from "styled-components";
+import React from "react";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Work } from "../../../components/work/Work";
@@ -8,10 +7,11 @@ import project2 from "../../../assets/img/project2.png";
 import project3 from "../../../assets/img/project3.png";
 import project4 from "../../../assets/img/project4.png";
 import { Container } from "../../../components/Container";
+import { S } from "./WorksStyles";
 
-export const Works = () => {
+export const Works: React.FC = () => {
     return (
-        <StyledWorks>
+        <S.Works id="works">
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                     <FlexWrapper justify="space-around" wrap="wrap" gap="40px">
@@ -21,9 +21,7 @@ export const Works = () => {
                         <Work src={project4} title="project 4" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."></Work>
                     </FlexWrapper>
             </Container>
-        </StyledWorks>
+        </S.Works>
     )
 }
 
-const StyledWorks = styled.section`
-`
