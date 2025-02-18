@@ -4,25 +4,32 @@ import { Logo } from "../../components/logo/logo";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Theme } from "../../styles/Theme";
-import { Menu } from "../../components/menu/Menu";
+import { DesktopMenu } from "../../components/menu/DesktopMenu";
+import { MobileMenu } from "../../components/menu/MobileMenu";
+import { Icon } from "../../components/icon/Icon";
 
-const items = ["Home", "Skills", "Works", "Testimony", "Contact"];
+const items = ["Home", "Skills", "Works", "Contact"];
 
 export const Header = () => {
     return (
-        <StyledHeader>
-            <Container>
-                <FlexWrapper justify="space-between" align="center">
-                    <Logo/>
-                    <Menu MenuItems={items}/>
-                </FlexWrapper>
-                
-            </Container>
-        </StyledHeader>
+        <div>
+            <StyledDesktopHeader>
+                <Container>
+                    <FlexWrapper justify="space-between">
+                        <Icon iconId={'code'}/>
+                        <DesktopMenu MenuItems={items}/>
+                    </FlexWrapper>
+                    
+                </Container>
+            </StyledDesktopHeader>
+            <MobileMenu MenuItems={items}/>
+        </div>
+        
+
     );
 }
 
-const StyledHeader = styled.header`
+const StyledDesktopHeader = styled.header`
     background-color: ${Theme.colors.primaryBg}, 0.7;
     backdrop-filter: blur(10px);
     padding: 20px 0;
@@ -32,4 +39,7 @@ const StyledHeader = styled.header`
 
     z-index: 5;
 
+    @media ${Theme.media.tablet}{
+        display: none;
+    }
 `

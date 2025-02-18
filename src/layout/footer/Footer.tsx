@@ -10,30 +10,31 @@ export const Footer = () => {
         <StyledFooter>
             <Container>
                 <FlexWrapper direction="column" align="center">
-                    <Name>Svetlana</Name>
+                    <Name>My social links</Name>
                     <SocialList>
                         <SocialItem>
-                            <SocialIconLink>
+                            <SocialIconLink href="" target="_blank">
                                 <Icon iconId={"instagram"}/>
                             </SocialIconLink>
                         </SocialItem>
                         <SocialItem>
-                            <SocialIconLink>
+                            <SocialIconLink href="" target="_blank">
                                 <Icon iconId={"telegram"}/>
                             </SocialIconLink>
                         </SocialItem>
                         <SocialItem>
-                            <SocialIconLink>
-                                <Icon iconId={"vk"}/>
+                            <SocialIconLink href="" target="_blank">
+                                <Icon iconId={"github"}/>
                             </SocialIconLink>
                         </SocialItem>
                         <SocialItem>
-                            <SocialIconLink>
+                            <SocialIconLink href="" target="_blank">
                                 <Icon iconId={"linkedin"}/>
                             </SocialIconLink>
                         </SocialItem>
                     </SocialList>
-                    <Copyright>@esim inch</Copyright>
+                    <Copyright>@2025 Ripsime Madoyan</Copyright>
+
                 </FlexWrapper>
             </Container>            
         </StyledFooter>
@@ -46,10 +47,13 @@ const StyledFooter = styled.footer`
 `
 
 const Name = styled.span`
-    
+    font-size: 12px;
+    margin: 10px 0;
+    color: ${Theme.colors.accent}
 `
 const SocialList = styled.ul`
     display: flex;
+    gap: 5px;
 `
 
 const SocialItem = styled.li`
@@ -57,9 +61,11 @@ const SocialItem = styled.li`
 `
 
 const SocialIconLink = styled.a`
-
+    /* cursor: pointer; */
 `
 
-const Copyright = styled.small`
-
+const Copyright = styled.div`
+    font-size: 10px;
+    margin: 10px 0;
+    color: ${Theme.colors.accent}
 `

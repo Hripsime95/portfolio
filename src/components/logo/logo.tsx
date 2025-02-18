@@ -6,9 +6,13 @@ import { Icon } from "../icon/Icon";
 
 export const Logo = () => {
     return (
-        <a href="">
+        <StyledLogo href="">
             <Icon iconId={'code'}/>
-        </a>
+        </StyledLogo>
     );
 }
+
+const StyledLogo = styled.a`
+    cursor: auto;
+`
 

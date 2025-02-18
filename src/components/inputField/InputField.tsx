@@ -6,20 +6,21 @@ type InputFieldType = {
     type?: "text" | "password" | "textarea";
     label: string;
     id: string;
+    name?: string;
 }
 
 export const InputField: React.FC<InputFieldType> = (props: InputFieldType) => {
     if(props.type && props.type == "textarea"){
         return (
             <StyledInputField>
-            <Field as="textarea" type={props.type || 'text'} id={props.id} placeholder={props.label}/>
+            <Field as="textarea" type={props.type || 'text'} id={props.id} placeholder={props.label} name={props.name}/>
             <StyledLabel htmlFor={props.id}>{props.label}</StyledLabel>
         </StyledInputField>
         )
     }
     return (
         <StyledInputField>
-            <Field type={props.type || 'text'} id={props.id} placeholder={props.label}/>
+            <Field type={props.type || 'text'} id={props.id} placeholder={props.label} name={props.name}/>
             <StyledLabel htmlFor={props.id}>{props.label}</StyledLabel>
         </StyledInputField>
     );

@@ -11,5 +11,10 @@ export const Theme ={
             primaryBorder: "#8643DC",
             secondaryBorder: "#00C0FD",
         }
+    },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)"
     }
 }
