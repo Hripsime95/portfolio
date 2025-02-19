@@ -24,14 +24,16 @@ const MainTitle = styled.h1`
 `
 
 const Name = styled.h2`
-    font-family: "Josefin Sans" sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     font-weight: 700;
-    font-size: 50px;
+    font-size: clamp(36px, 5vw, 50px);
     letter-spacing: 0.05em;
     margin: 10px 0;
 
     span{
         position: relative;
+        display: inline-block;
+        /* width: ; */
         z-index: 0;
 
         &::before{

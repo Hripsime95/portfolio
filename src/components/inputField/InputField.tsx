@@ -12,14 +12,14 @@ export const InputField: React.FC<InputFieldType> = (props: InputFieldType) => {
     if(props.type && props.type == "textarea"){
         return (
             <S.InputField>
-            <S.Field as="textarea" type={props.type || 'text'} id={props.id} placeholder={props.label} name={props.name}/>
+            <S.Field required as="textarea" type={props.type || 'text'} id={props.id} placeholder={props.label} name={props.name}/>
             <S.Label htmlFor={props.id}>{props.label}</S.Label>
         </S.InputField>
         )
     }
     return (
         <S.InputField>
-            <S.Field type={props.type || 'text'} id={props.id} placeholder={props.label} name={props.name}/>
+            <S.Field required type={props.type || 'text'} id={props.id} placeholder={props.label} name={props.name}/>
             <S.Label htmlFor={props.id}>{props.label}</S.Label>
         </S.InputField>
     );

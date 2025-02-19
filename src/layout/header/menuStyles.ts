@@ -12,12 +12,6 @@ const Header = styled.header`
     z-index: 5;
 `
 
-const MenuItem = styled.a`
-    display: inline-block;
-    &::first-letter {
-        text-transform: uppercase; 
-    }
-`
 //Mobile
 const MobileMenu = styled.nav`
 `
@@ -26,7 +20,7 @@ const MenuButton = styled.button<{isOpen: boolean}>`
     width: 200px;
     height: 200px;
     top: -55px;
-    right: -100px;
+    right: -150px;
     z-index: 999999999;
 
     span{
@@ -69,9 +63,7 @@ const MenuButton = styled.button<{isOpen: boolean}>`
                 width: 30px;
             `}
         }
-
-        
-    } 
+    }
 `
 const MenuPopup = styled.div<{isOpen: boolean}>`
     position:fixed;
@@ -99,7 +91,8 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
         gap: 70px;
 
         li > a {
-            color: ${Theme.colors.accent}
+            color: ${Theme.colors.accent};
+            font-size: 50px;
         }
     }
 `
@@ -109,24 +102,11 @@ const DesktopMenu = styled.nav`
     ul {
         display: flex;
         gap: 70px;
-
-        li {
-            border-bottom: 1px solid transparent;
-
-            &:hover{
-                border-bottom: 1px solid ${Theme.colors.accent};
-            }
-        }
-
-        li > a {
-            color: ${Theme.colors.accent}
-        }
     }
 `
 
 export const S = {
     Header,
-    MenuItem,
     MobileMenu,
     MenuButton,
     MenuPopup,

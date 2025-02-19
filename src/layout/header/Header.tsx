@@ -6,7 +6,33 @@ import { MobileMenu } from "./mobileMenu/MobileMenu";
 import { Icon } from "../../components/icon/Icon";
 import { S } from "./menuStyles";
 
-const items = ["home", "skills", "works", "contact"];
+export type TabId = "home" | "skills" | "works" | "contact";
+
+type MenuItemType = {
+    title: string;
+    id: TabId;
+}
+
+export type MenuItemsType = MenuItemType[];
+
+const items: MenuItemsType = [
+    {
+        title: "home",
+        id: "home"
+    },
+    {
+        title: "skills",
+        id: "skills"
+    },
+    {
+        title: "works",
+        id: "works"
+    },
+    {
+        title: "contact",
+        id: "contact"
+    }
+]
 
 export const Header = () => {
 

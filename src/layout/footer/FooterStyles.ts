@@ -17,11 +17,14 @@ const SocialList = styled.ul`
 `
 
 const SocialItem = styled.li`
-    
+    transition: 0.3s;
+    &:hover{
+        transform: translateY(-5px);
+    }
 `
 
 const SocialIconLink = styled.a`
-    /* cursor: pointer; */
+   
 `
 
 const Copyright = styled.div`
