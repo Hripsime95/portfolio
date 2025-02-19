@@ -2,6 +2,7 @@ import { styled } from "styled-components"
 import { Theme } from "../../styles/Theme"
 
 const Footer = styled.footer`
+    position: relative;
     background-color: ${Theme.colors.primaryBg};
     min-height: 20vh;
 `

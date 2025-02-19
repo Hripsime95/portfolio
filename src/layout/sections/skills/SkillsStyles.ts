@@ -4,6 +4,7 @@ import { Theme } from "../../../styles/Theme"
 const Skills = styled.section.attrs((props) => ({
     id: props.id
 }))`
+    position:relative;
 `
 
 const MySkillTitle = styled.h3`
