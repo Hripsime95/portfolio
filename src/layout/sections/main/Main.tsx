@@ -11,7 +11,7 @@ export const Main: React.FC = () => {
                 <FlexWrapper align="center" justify="space-around" wrap="wrap" gap="20px">
                     <S.TextWrapper>
                         <S.SmallText>Hi There</S.SmallText>
-                        <S.Name>I am <span>Ripsime Madoyan</span></S.Name>
+                        <S.Name>I am <span>Ripsime</span></S.Name>
                         <S.MainTitle>A Web Developer.</S.MainTitle>
                     </S.TextWrapper>
                     <S.PhotoWrapper>
