@@ -6,7 +6,6 @@ import { Theme } from "../../../styles/Theme";
 
 export const Menu: React.FC<{MenuItems: MenuItemsType}> = (props: {MenuItems: MenuItemsType}) => {
     const [currentTab, setCurrentTab] = useState("home");
-    let menuTab = "home";
 
     function changeMenuTab(tabId: TabId) {
         console.log("tabid : ", tabId)

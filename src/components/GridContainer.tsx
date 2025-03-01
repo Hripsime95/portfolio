@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {GridItem} from "../components/skill/Skill"
 
 type GridContainerType = {
     rowCount: number,
